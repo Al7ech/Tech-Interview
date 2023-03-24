@@ -35,7 +35,10 @@
 <li> 값이 주어졌을 때, 어떻게 하면 충돌이 최대한 적은 해시 함수를 설계할 수 있을까요?</li>
 <li> 해시값이 충돌했을 때, 어떤 방식으로 처리할 수 있을까요?</li>
 <li> 본인이 사용하는 언어에서는, 어떤 방식으로 해시 충돌을 처리하나요?</li>
+  https://stackoverflow.com/questions/9010222/why-can-a-python-dict-have-multiple-keys-with-the-same-hash
+  https://stackoverflow.com/questions/33611509/es6-map-and-set-complexity-v8-implementation?noredirect=1&lq=1
 <li> Double Hashing 의 장점과 단점에 대해서 설명하고, 단점을 어떻게 해결할 수 있을지 설명해 주세요.</li>
+<li> Hashing Table resizing Time Complexity?</li>
 </ul>
 </details>
 
