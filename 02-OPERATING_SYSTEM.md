@@ -15,8 +15,10 @@
   <summary><h3>2. 인터럽트가 무엇인지 설명해 주세요.</h3></summary>
 <ul>
 <li> 인터럽트는 어떻게 처리하나요?</li>
+  CPU Interrupt Line을 통해 Interrupt 설정 -> 하던 일을 PCB에 저장 후 Interrupt vector에서 ISR 주소를 찾아 실행 -> PCB에서 다시 복구
 <li> Polling 방식에 대해 설명해 주세요.</li>
 <li> HW / SW 인터럽트에 대해 설명해 주세요.</li>
+<li> Syscall은 인터럽트인가요?.</li>
 </ul>
 </details>
 
@@ -39,7 +41,9 @@
 <li> 일반적인 주소공간 그림처럼, Stack과 Heap의 크기는 매우 크다고 할 수 있을까요? 그렇지 않다면, 그 크기는 언제 결정될까요?</li>
 <li> Stack과 Heap 공간에 대해, 접근 속도가 더 빠른 공간은 어디일까요?</li>
 <li> 다음과 같이 공간을 분할하는 이유가 있을까요?</li>
+  https://stackoverflow.com/questions/7873579/why-is-a-processs-address-space-divided-into-four-segments-text-data-stack-a
 <li> 스레드의 주소공간은 어떻게 구성되어 있을까요?</li>
+  https://velog.io/@klm03025/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4-%EC%A3%BC%EC%86%8C-%EA%B3%B5%EA%B0%84
 </ul>
 </details>
 
@@ -47,8 +51,11 @@
   <summary><h3>5. 단기, 중기, 장기 스케쥴러에 대해 설명해 주세요.</h3></summary>
 <ul>
 <li> 현대 OS에는 단기, 중기, 장기 스케쥴러를 모두 사용하고 있나요?</li>
+  https://kosaf04pyh.tistory.com/191
 <li> 프로세스의 스케쥴링 상태에 대해 설명해 주세요.</li>
 <li> preemptive/non-preemptive 에서 존재할 수 없는 상태가 있을까요?</li>
+  ???
+  https://umbum.dev/60
 <li> Memory가 부족할 경우, Process는 어떠한 상태로 변화할까요?</li>
 </ul>
 </details>
@@ -58,6 +65,7 @@
 <ul>
 <li> 프로세스와 쓰레드는 컨텍스트 스위칭이 발생했을 때 어떤 차이가 있을까요?</li>
 <li> 컨텍스트 스위칭이 발생할 때, 기존의 프로세스 정보는 커널스택에 어떠한 형식으로 저장되나요?</li>
+  PC, SP
 <li> 컨텍스트 스위칭은 언제 일어날까요?</li>
 </ul>
 </details>
@@ -69,6 +77,7 @@
 <li> 싱글 스레드 CPU 에서 상시로 돌아가야 하는 프로세스가 있다면, 어떤 스케쥴링 알고리즘을 사용하는 것이 좋을까요? 또 왜 그럴까요?</li>
 <li> 동시성과 병렬성의 차이에 대해 설명해 주세요.</li>
 <li> 타 스케쥴러와 비교하여, Multi-level Feedback Queue는 어떤 문제점들을 해결한다고 볼 수 있을까요?</li>
+  https://jhnyang.tistory.com/156
 </ul>
 </details>
 
@@ -76,6 +85,7 @@
   <summary><h3>8. 뮤텍스와 세마포어의 차이점은 무엇인가요?</h3></summary>
 <ul>
 <li> 이진 세마포어와 뮤텍스의 차이에 대해 설명해 주세요.</li>
+  https://blog.seongjun.kr/26-difference-between-binary-semaphore-and-mutex/
 </ul>
 </details>
 
@@ -86,6 +96,9 @@
 <li> 그렇다면 3가지만 충족하면 왜 Deadlock 이 발생하지 않을까요?</li>
 <li> 어떤 방식으로 예방할 수 있을까요?</li>
 <li> 왜 현대 OS는 Deadlock을 처리하지 않을까요?</li>
+  교착 상태를 무시하는 것이 다른 처리 방법과 비교해 비용이 적게 듭니다.
+  많은 시스템에서 교착 상태는 드물게 발생하기 때문에 교착 상태 처리에 대한 부가적인 비용은 그만한 가치가 없기 때문입니다.
+  그러므로, 교착 상태를 처리하는 프로그램을 작성하는 것은 개발자 몫이다.
 <li> Wait Free와 Lock Free를 비교해 주세요.</li>
 </ul>
 </details>
