@@ -86,7 +86,8 @@
 <ul>
 <li> 이진 세마포어와 뮤텍스의 차이에 대해 설명해 주세요.</li>
   https://blog.seongjun.kr/26-difference-between-binary-semaphore-and-mutex/
-</ul>
+<li> 뮤텍스 구현 </li>
+  compare and swap
 </details>
 
 <details>
