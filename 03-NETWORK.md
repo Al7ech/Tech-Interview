@@ -6,7 +6,9 @@
 <li> 세션 방식의 로그인 과정에 대해 설명해 주세요.</li>
 <li> HTTP의 특성인 Stateless에 대해 설명해 주세요.</li>
 <li> Stateless의 의미를 살펴보면, 세션은 적절하지 않은 인증 방법 아닌가요?</li>
+  session은 stateful 하다. 토큰을 이용한 방식을 사용해 stateless하게 만들 수 있다.
 <li> 규모가 커져 서버가 여러 개가 된다면, 세션을 어떻게 관리할 수 있을까요?</li>
+  session-based balancing 사용
 </ul>
 </details>
 
@@ -14,7 +16,9 @@
   <summary><h3>2. HTTP 응답코드에 대해 설명해 주세요.</h3></summary>
 <ul>
 <li> 401 (Unauthorized) 와 403 (Forbidden)은 의미적으로 어떤 차이가 있나요?</li>
+  인증되지 않음 과 권한 없음
 <li> 200 (ok) 와 201 (created) 의 차이에 대해 설명해 주세요.</li>
+  요청을 처리함 vs 요청을 처리해서 만듬
 </ul>
 </details>
 
@@ -25,6 +29,7 @@
 <li> GET과 POST의 차이는 무엇인가요?</li>
 <li> POST와 PUT, PATCH의 차이는 무엇인가요?</li>
 <li> HTTP 1.1 이후로, GET에도 Body에 데이터를 실을 수 있게 되었습니다. 그럼에도 불구하고 왜 아직도 이런 방식을 지양하는 것일까요?</li>
+  캐싱, 보안
 </ul>
 </details>
 
@@ -49,6 +54,7 @@
   <summary><h3>6. HTTP/1.1과 HTTP/2의 차이점은 무엇인가요?</h3></summary>
 <ul>
 <li> HOL Blocking 에 대해 설명해 주세요.</li>
+  tcp sequence number
 <li> HTTP/3.0의 주요 특징에 대해 설명해 주세요.</li>
 </ul>
 </details>
@@ -57,13 +63,14 @@
   <summary><h3>7. TCP와 UDP의 차이에 대해 설명해 주세요.</h3></summary>
 <ul>
 <li> 왜 HTTP는 TCP를 사용하나요?</li>
+  신뢰성이 중요하기 때문
 <li> 그렇다면, 왜 HTTP/3 에서는 UDP(QUIC) 를 사용하나요? 위에서 언급한 UDP의 문제가 해결되었나요?</li>
 <li> 본인이 새로운 통신 프로토콜을 TCP나 UDP를 사용해서 구현한다고 하면, 어떤 기준으로 프로토콜을 선택하시겠어요?</li>
 <li> Checksum이 무엇인가요?</li>
 <li> TCP와 UDP 중 어느 프로토콜이 Checksum을 수행할까요?</li>
 <li> 그렇다면, Checksum을 통해 오류를 정정할 수 있나요? </li>
 <li> TCP가 신뢰성을 보장하는 방법에 대해 설명해 주세요.</li>
-<li> TCP의 혼잡 제어 처리 방법에 대해 설명해 주세요.</li>
+<li> TCP의 흐름/혼잡 제어 처리 방법에 대해 설명해 주세요.</li>
 </ul>
 </details>
 
@@ -82,10 +89,12 @@
   <summary><h3>9. IP 주소는 무엇이며, 어떤 기능을 하고 있나요?</h3></summary>
 <ul>
 <li> IPv6는 IPv4의 주소 고갈 문제를 해결하기 위해 만들어졌지만, 아직도 수많은 기기가 IPv4를 사용하고 있습니다. 고갈 문제를 어떻게 해결할 수 있을까요?</li>
+  IPv6 전환 기술
 <li> IPv4와 IPv6의 차이에 대해 설명해 주세요.</li>
 <li> IPv4를 사용하는 장비와 IPv6를 사용하는 같은 네트워크 내에서 통신이 가능한가요? 가능하다면 어떤 방법을 사용하나요? </li>
 <li> IP가 송신자와 수신자를 정확하게 전송되는 것을 보장해 주나요?</li>
 <li> IPv4에서 수행하는 Checksum과 TCP에서 수행하는 Checksum은 어떤 차이가 있나요?</li>
+  ip는 헤더만 체크
 <li> TTL(Hop Limit)이란 무엇인가요? </li>
 <li> IP 주소와 MAC 주소의 차이에 대해 설명해 주세요.</li>
 </ul>
@@ -96,9 +105,11 @@
 <ul>
 <li> Transport Layer와, Network Layer의 차이에 대해 설명해 주세요.</li>
 <li> L3 Switch와 Router의 차이에 대해 설명해 주세요.</li>
+  HW/SW 스위칭
 <li> 각 Layer는 패킷을 어떻게 명칭하나요? 예를 들어, Transport Layer의 경우 Segment라 부릅니다.</li>
 <li> 각각의 Header의 Packing Order에 대해 설명해 주세요.</li>
 <li> ARP에 대해 설명해 주세요.</li>
+<li> ARP request를 보낼떄 broadcast하는이유?</li>
 </ul>
 </details>
 
@@ -106,6 +117,7 @@
   <summary><h3>11. 3-Way Handshake에 대해 설명해 주세요.</h3></summary>
 <ul>
 <li> ACK, SYN 같은 정보는 어떻게 전달하는 것 일까요?</li>
+  https://kosaf04pyh.tistory.com/162
 <li> 2-Way Handshaking 를 하지않는 이유에 대해 설명해 주세요.</li>
 <li> 두 호스트가 동시에 연결을 시도하면, 연결이 가능한가요? 가능하다면 어떻게 통신 연결을 수행하나요?</li>
 <li> SYN Flooding 에 대해 설명해 주세요.</li>
