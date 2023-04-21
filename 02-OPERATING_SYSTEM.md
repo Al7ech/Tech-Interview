@@ -184,6 +184,7 @@
 <details>
   <summary><h3>20. 동기화를 구현하기 위한 하드웨어적인 해결 방법에 대해 설명해 주세요.</h3></summary>
 <ul>
+  CAS atomic variable
 <li> volatile 키워드는 어떤 의미가 있나요?</li>
 <li> 싱글코어가 아니라 멀티코어라면, 어떻게 동기화가 이뤄질까요?</li>
 </ul>
