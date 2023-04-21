@@ -42,6 +42,7 @@
   <summary><h3>6. Call By Value와 Call By Reference의 차이를 본인의 언어를 기반으로 설명해 주세요.</h3></summary>
 <ul>
 <li> 사실 이 질문에는 약간의 낚시가 있습니다. 과연 모든 언어에 저 개념이 존재할까요?</li>
+  Call by Assignment
 </ul>
 </details>
 
