@@ -119,6 +119,7 @@
 <ul>
 <li> Shared Memory가 무엇이며, 사용할 때 유의해야 할 점에 대해 설명해 주세요.</li>
 <li> 메시지 큐는 단방향이라고 할 수 있나요?</li>
+  RPC
 </ul>
 </details>
 
