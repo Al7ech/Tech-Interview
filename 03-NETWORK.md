@@ -26,6 +26,8 @@
   <summary><h3>3. HTTP Method 에 대해 설명해 주세요.</h3></summary>
 <ul>
 <li> HTTP Method의 멱등성에 대해 설명해 주세요.</li>
+  GET Method는 항상 멱등성이 보장되나요?
+  GET Method를 통해 데이터를 받아온 브라우저는 언제까지 이 데이터가 유효하다고 할 수 있나요? -> HTTP Keepalive
 <li> GET과 POST의 차이는 무엇인가요?</li>
 <li> POST와 PUT, PATCH의 차이는 무엇인가요?</li>
 <li> HTTP 1.1 이후로, GET에도 Body에 데이터를 실을 수 있게 되었습니다. 그럼에도 불구하고 왜 아직도 이런 방식을 지양하는 것일까요?</li>
@@ -72,6 +74,8 @@
 <li> 그렇다면, Checksum을 통해 오류를 정정할 수 있나요? </li>
 <li> TCP가 신뢰성을 보장하는 방법에 대해 설명해 주세요.</li>
 <li> TCP의 흐름/혼잡 제어 처리 방법에 대해 설명해 주세요.</li>
+  DNS는 UDP 쓰지만 신뢰할 수 있는 연결이 필요한 경우에는 TCP 사용
+  TCP Fast open으로 zero rtt 사용
 </ul>
 </details>
 
@@ -131,6 +135,7 @@
   <summary><h3>12. 4-Way Handshake에 대해 설명해 주세요.</h3></summary>
 <ul>
 <li> 패킷이 4-way handshake 목적인지 어떻게 파악할 수 있을까요?</li>
+<li> 왜 연결을 끊을 때는 4-way handshake를 사용하나요?</li>
 <li> 빨리 끊어야 할 경우엔, (즉, 4-way Handshake를 할 여유가 없다면) 어떻게 종료할 수 있을까요?</li>
   SYN 에 긴급 플래그 켜서 보내고 끝
 <li> 4-Way Handshake 과정에서 중간에 한쪽 네트워크가 강제로 종료된다면, 반대쪽은 이를 어떻게 인식할 수 있을까요?</li>
@@ -179,6 +184,7 @@
 <details>
   <summary><h3>17. 라우터 내의 포워딩 과정에 대해 설명해 주세요.</h3></summary>
 <ul>
+  Link state, distant vector
 <li> 라우팅과 포워딩의 차이는 무엇인가요?</li>
 <li> 라우팅 알고리즘에 대해 설명해 주세요.</li>
 <li> 포워딩 테이블의 구조에 대해 설명해 주세요.</li>
