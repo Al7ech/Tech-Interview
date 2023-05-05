@@ -33,6 +33,7 @@
 <details>
   <summary><h3>4. 트랜잭션 격리 레벨에 대해 설명해 주세요.</h3></summary>
 <ul>
+  https://www.mongodb.com/docs/manual/core/read-isolation-consistency-recency/
 <li> 모든 DBMS가 4개의 레벨을 모두 구현하고 있나요? 그렇지 않다면 그 이유는 무엇일까요?</li>
 <li> 만약 MySQL을 사용하고 있다면, (InnoDB 기준) Undo 영역과 Redo 영역에 대해 설명해 주세요.</li>
 <li> 그런데, 스토리지 엔진이 정확히 무엇을 하는 건가요?</li>
